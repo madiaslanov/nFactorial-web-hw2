@@ -83,17 +83,23 @@ const Dialog = () => {
     };
 
     return (
-        <div className="flex w-screen flex-col h-screen p-4 bg-white">
-            <div className="flex-1 overflow-y-auto border p-4 rounded bg-gray-100 mb-4 flex flex-col">
+        <div
+            className="flex flex-col h-screen p-4 bg-white max-w-[900px] mx-auto sm:max-w-full sm:p-2"
+            style={{ height: '100vh' }}
+        >
+            <div
+                className="flex-1 overflow-y-auto border p-4 rounded bg-gray-100 flex flex-col"
+                style={{ marginBottom: 0, minHeight: 0 }}
+            >
                 {messages.map((msg, i) => (
                     <div
                         key={i}
                         className={`mb-2 p-2 rounded max-w-[70%] relative ${
-                            msg.sender === 'user' ? 'bg-blue-200 self-end' : 'bg-gray-200 self-start'
+                            msg.sender === "user" ? "bg-blue-200 self-end" : "bg-gray-200 self-start"
                         }`}
                     >
                         {msg.content}
-                        {msg.sender === 'user' && (
+                        {msg.sender === "user" && (
                             <img
                                 src={user?.check === true ? "/checksOk.png" : "/checksNo.png"}
                                 className="w-4 h-4 absolute right-0 bottom-0"
@@ -104,8 +110,7 @@ const Dialog = () => {
                 ))}
             </div>
 
-
-            <div className="flex gap-2">
+            <div className="flex gap-2 p-2" style={{ marginTop: 0 }}>
                 <input
                     value={newMessage}
                     onChange={(e) => setNewMessage(e.target.value)}
@@ -123,6 +128,7 @@ const Dialog = () => {
             </div>
         </div>
     );
+
 };
 
 export default Dialog;
