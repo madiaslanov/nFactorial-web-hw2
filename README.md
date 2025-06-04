@@ -4,7 +4,7 @@
 
 ## Демо
 
-[Деплой приложения](https://n-factorial-web-hw2.vercel.app/1)
+[Деплой приложения](https://n-factorial-web-hw2-awplakm8s-madis-projects-f57aa02c.vercel.app/1)
 
 ## Особенности
 
